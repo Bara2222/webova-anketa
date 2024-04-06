@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Webová anketa</title>
+</head>
+<header>
+    <h1><%= title %></h1>
+</header>
+<body>
+    <h2>Anketa o fotbalovém Euru 2024</h2>
+<form action="/submit" method="post" class="form-container">
+    <div>
+        <label>Vyberte vaši oblíbenou pozici ve fotbale:</label>
+        <select id="sport" name="sport">
+            <option value="hroťák">Hrotový útočník</option>
+            <option value="křídla">Pravá / Levé křídlo</option>
+            <option value="záložník">Záložník</option>
+            <option value="stoper">Stoper</option>
+            <option value="obránce">Pravý / Levý obránce</option>
+            <option value="brankář">Brankář</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="roleTeam">Napište jméno týmu kterému budete letos fandit:</label>
+        <input type="text" id="roleTeam" name="roleTeam">
+    </div>
+    
+    <div>
+        <label for="hours">Na jakám místě si myslíte, že skončí česká reprezentace:</label>
+        <input type="number" step="1" id="hours" name="hours" required min="1" max="23">
+    </div>
+
+    <div>
+        <label for="importance">Jak se vám tahle anketa líbila? (ohodnoť jako ve škole)</label>
+        <input type="range" id="importance" name="importance" min="1" max="5" step="1">
+    </div>
+    
+    <button type="submit">Odeslat odpovědi</button>
+</form>
+    
+</body>
+<footer>
+    <p>&copy; 2024 Barbora Žemličková IT-2 , Projekt Webová anketa</p>
+</footer>
+</html>
